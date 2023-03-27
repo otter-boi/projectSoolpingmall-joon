@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    th:with="lang=${#locale.language}" th:lang="${lang}">
+
+    <!-- [head] 영역 시작 -->
+    <head>
+        <th:block th:insert="fragments/head :: headFragment"></th:block>
+        
+    </head>
+    <!-- [head] 영역 끝 -->
+
+    <!-- [body] 영역 시작 -->
+    <body>
+    
+    
+   		<!-- [navigation] 영역 시작 -->
+        <div th:replace="fragments/navigation :: navigationFragment"></div>
+        <!-- [navigation] 영역 끝 -->
+        
+        
+        <!-- [header] 영역 시작 -->
+        <header th:replace="fragments/header :: headerFragment"></header>
+        <!-- [header] 영역 끝 -->
+        
+        <!-- [content] 영역 시작 -->
+        <div th:replace="fragments/content :: contentFragment"></div>
+        <!-- [content] 영역 끝 -->
+        
+        <!-- [footer] 영역 시작 -->
+        <footer th:replace="fragments/footer :: footerFragment"></footer>
+        <!-- [footer] 영역 끝 -->
+    
+    </body>
+    <!-- [body] 영역 끝 -->
+</html>
